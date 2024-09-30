@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/assets/farmacia.png" type="image/x-icon">
+    <link rel="stylesheet" href="/styles/global.css">
+    <link rel="stylesheet" href="/styles/home.css">
+    <link rel="stylesheet" href="/styles/header.css">
+    <link rel="stylesheet" href="/styles/dropdown.css">
+    <link rel="stylesheet" href="/styles/theme.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Painel farmácia</title>
+</head>
+
+<body>
+    <header>
+        <div class="contentHeader">
+            <img src="/assets/farmacia.png" alt="Icon Farmácia">
+            <nav>
+                <a id="select" href="/">Início</a>
+                <a href="/clientes">Clientes</a>
+                <a href="/medicamentos">Medicamentos</a>
+                <a href="/vendas">Vendas</a>
+                <ion-icon data-bs-toggle="modal" data-bs-target="#exampleModal" id="iconSearch"
+                    name="search-outline"></ion-icon>
+                <div class="dropdown">
+                    <ion-icon data-bs-toggle="dropdown" aria-expanded="false" id="iconSearch"
+                        name="brush-outline"></ion-icon>
+                    <ul id="menuDropdown" class="dropdown-menu dropdown-menu-end">
+                        <li id="btn-switch-light"><a class="dropdown-item">Tema claro</a></li>
+                        <li id="btn-switch-dark" style="margin-top: 5px;"><a class="dropdown-item">Tema escuro</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <ion-icon name="menu-outline" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"
+                aria-controls="offcanvasExample"></ion-icon>
+        </div>
+    </header>
+    <main>
+        <div class="contentMain">
+            <div class="contentText">
+                <h1>Farmácia Você</h1>
+                <h2>Saúde e Cuidado em Cada Prescrição.</h2>
+                <p>Seu bem-estar é nossa prioridade. Oferecemos uma ampla gama de medicamentos, produtos de saúde e
+                    cuidados pessoais com a qualidade e confiança que você merece. </p>
+            </div>
+            <img src="/assets/imagemhome.png" alt="Imagem Home">
+        </div>
+    </main>
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Opções</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="d-flex justify-content-center align-items-start flex-column">
+                <a style="border-bottom: 1px solid #d4d4d4; width: 100%; padding: 6px 0px; font-size: 18px;"
+                    href="/">Início</a>
+                <a style="border-bottom: 1px solid #d4d4d4; width: 100%; padding: 6px 0px; font-size: 18px;"
+                    href="/clientes">Clientes</a>
+                <a style="border-bottom: 1px solid #d4d4d4; width: 100%; padding: 6px 0px; font-size: 18px;" id="select"
+                    href="/medicamentos">Medicamentos</a>
+                <a style="border-bottom: 1px solid #d4d4d4; width: 100%; padding: 6px 0px; font-size: 18px;"
+                    href="/vendas">Vendas</a>
+                <a style="border-bottom: 1px solid #d4d4d4; width: 100%; padding: 6px 0px; font-size: 18px;"
+                    data-bs-toggle="modal" data-bs-target="#exampleModal" href="">Buscar</a>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5 d-flex" id="exampleModalLabel">Buscar por medicamentos</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form action="/buscarmedicamentos" method="get">
+                    <div class="modal-body">
+                        <input name="nome_medicamento"
+                            style="width: 100%; padding: 10px; outline: none; border-radius: 8px;" type="text"
+                            placeholder="Nome do medicamento...">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" style="background-color: #004186; border: 1px solid #004186;"
+                            class="btn btn-primary">Buscar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="/scripts/theme.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

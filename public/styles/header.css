@@ -1,0 +1,92 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    border-bottom: 1px solid #e8e8e8;
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    width: 100%;
+}
+
+header .contentHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 1200px;
+}
+
+header .contentHeader img {
+    height: auto;
+    width: 45px;
+}
+
+header .contentHeader nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header .contentHeader nav a {
+    margin: 0px 5px;
+    color: #000;
+    text-decoration: none;
+    transition: 0.2s;
+    padding: 6px 12px;
+    border-radius: 8px;
+}
+
+header.dark-mode .contentHeader nav a {
+    margin: 0px 5px;
+    color: #ffffff;
+    text-decoration: none;
+    transition: 0.2s;
+    padding: 6px 12px;
+    border-radius: 8px;
+}
+
+header .contentHeader nav a:hover {
+    background-color: #004186;
+    color: #fff;
+    transition: 0.2s;
+}
+
+header .contentHeader nav #select {
+    background-color: #004186;
+    color: #fff;
+}
+
+header .contentHeader ion-icon {
+    display: none;
+    font-size: 30px;
+}
+
+header .contentHeader #iconSearch{
+    display: flex;
+    padding: 6px 6px;
+    border-radius: 8px;
+    border: 1px solid #004186;
+    margin-left: 15px;
+    font-size: 20px;
+    color: #004186;
+    transition: 0.2s;
+}
+
+header .contentHeader #iconSearch:hover{
+    color: #ffffff;
+    background-color: #004186;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+@media screen and (max-width:765px) {
+    header .contentHeader nav {
+        display: none;
+    }
+
+    header .contentHeader ion-icon {
+        display: flex;
+    }
+}

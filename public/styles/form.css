@@ -1,0 +1,91 @@
+.contentForm {
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    width: 90%;
+    max-width: 1200px;
+    flex-direction: column;
+    height: 80vh;
+}
+
+.contentForm h1 {
+    margin-top: 20px;
+}
+
+.contentForm p {
+    margin-bottom: 10px;
+}
+
+.contentForm a{
+    margin-bottom: 30px;
+}
+
+.contentForm form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.contentForm form input {
+    width: 100%;
+    margin-bottom: 12px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    outline: none;
+    border: 1px solid #d4d4d4;
+    transition: 0.2s;
+}
+
+.contentForm form input:focus {
+    border: 1px solid #004186;
+    transition: 0.2s;
+}
+
+.contentForm form button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: none;
+    background-color: #004186;
+    color: #fff;
+    font-weight: 600;
+    transition: 0.2s;
+    margin-bottom: 30px;
+}
+
+.contentForm form button:hover {
+    background-color: #023368;
+    transition: 0.2s;
+}
+
+.contentForm form button ion-icon {
+    margin-left: 10px;
+    font-size: 22px;
+}
+
+.contentForm form .containerCountVendas{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.contentForm form .containerCountVendas button{
+    width: auto;
+    padding: 5px;
+    width: 50px;
+    font-size: 20px;
+    background-color: transparent;
+    border: 1px solid #004186;
+    color: #004186;
+}
+
+.contentForm form .containerCountVendas button:hover{
+    background-color: #004186;
+    color: #fff;
+}
